@@ -1,0 +1,43 @@
+[
+  {
+    "code": "GREG",
+    "name": "Gregorian",
+    "year-length": {
+      "day": 365,
+      "hour": 5,
+      "minute": 48
+    },
+    "months": [
+      {
+        "name": "January",
+        "length": 31
+      }
+    ]
+  },
+  {
+    "code": "JUL",
+    "name": "Julian",
+    "year-length": {
+      "day": 365
+    },
+    "months": [
+      {
+        "name": "January",
+        "length": 31
+      }
+    ]
+  },
+  {
+    "code": "CA_Percheval_I",
+    "name": "The Reign of Percheval I Caerûn",
+    "based-on": "caerûn",
+    "offset": {
+      "year-add": "248"
+    },
+    "aliases": [
+      "CA Percheval I",
+      "Percheval Caerun I",
+      "Caerun Percheval I"
+    ]
+  }
+]

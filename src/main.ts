@@ -1,5 +1,8 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
-import * as CTE from 'CustomTagEngine/index'
+import * as CustomTagEngine from 'CustomTagEngine/index';
+import validate_calendar from "./types/Calendar/CalendarSchemaValidator";
+import { Calendar, make_calendars } from "./types/Calendar/Calendar";
+import calendars from '../calendars.json';
 
 
 
@@ -33,22 +36,41 @@ export default class CalendarManagerPlugin extends Plugin {
 				if (view?.getMode() == "preview") {
 
 					let data = view?.getViewData();
-					let tag = new CTE.CustomTag('<@', '@>');
-					let tagHandler:CTE.CustomTagHandler = {
-						verifier: (str:string) => {if(str === 'TEST'){return true;}return false;},
-						callback: (str:string) => {return 'String has been replaced'}
+					let tag = new CustomTagEngine.CustomTag('<@', '@>');
+					let tagHandler: CustomTagEngine.CustomTagHandler = {
+						verifier: (str: string) => {
+							if (str === 'TEST') {
+								return true;
+							} 
+							return false;
+						},
+						callback: (str: string) => {
+							return 'String has been replaced'
+						}
 					}
 
 					console.log(data);
 
-					data = CTE.replace_custom_tag_in_string(data, tag, [tagHandler]) || data;
+					data = CustomTagEngine.replace_custom_tag_in_string(data, tag, [tagHandler]) || data;
 					console.log(data);
-					data = CTE.replace_all_custom_tags_in_string(data, tag, [tagHandler]);
+					data = CustomTagEngine.replace_all_custom_tags_in_string(data, tag, [tagHandler]);
 
 					view.setViewData(data, false);
 				}
 			}
 		});
+
+		let is_calendar_valid = validate_calendar(calendars);
+		console.log(is_calendar_valid);
+		console.log(calendars);
+
+		if (!is_calendar_valid) {
+			console.log(validate_calendar.errors)
+		}
+
+		if(is_calendar_valid) {
+			make_calendars(calendars);
+		}
 	}
 
 	onunload() {

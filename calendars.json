@@ -1,0 +1,181 @@
+[
+  {
+    "code": "DF",
+    "name": "The Dwarven Calendar",
+    "region": "The Dwarven Kingdoms",
+    "offset": {
+      "year": 0,
+      "day": 0,
+      "hour": 0,
+      "minute": 0
+    },
+    "year-length": {
+      "day": 365,
+      "hour": 5,
+      "minute": 48
+    },
+    "week-length": 7,
+    "day-length": 24,
+    "hour-length": 60,
+    "minute-length": 60,
+    "turn-length": 6,
+    "months": [
+      {
+        "name": "Summer Solstice",
+        "length": 1
+      },
+      {
+        "name": "Obsidian",
+        "length": 28
+      },
+      {
+        "name": "Galena",
+        "length": 28
+      },
+      {
+        "name": "Limestone",
+        "length": 28
+      },
+      {
+        "name": "Sandstone",
+        "length": 28
+      },
+      {
+        "name": "Timber",
+        "length": 28
+      },
+      {
+        "name": "Moonstone",
+        "length": 28,
+        "named-days": [
+          {
+            "name": "Winter Solstice",
+            "position": 28
+          }
+        ]
+      },
+      {
+        "name": "Opal",
+        "length": 28
+      },
+      {
+        "name": "Obsidian",
+        "length": 28
+      },
+      {
+        "name": "Gabbro",
+        "length": 28
+      },
+      {
+        "name": "Granite",
+        "length": 28
+      },
+      {
+        "name": "Slate",
+        "length": 28
+      },
+      {
+        "name": "Felsite",
+        "length": 28
+      },
+      {
+        "name": "Hematite",
+        "length": 28
+      },
+      {
+        "name": "Day of The Smith",
+        "length": 1,
+        "is-leap-days": true,
+        "is-standalone": false,
+        "appears": {
+          "month": "Summer Solstice",
+          "day": 2
+        }
+      }
+    ],
+    "aliases": [
+      "Dwarf",
+      "dwarven"
+    ]
+  },
+  {
+    "code": "CA",
+    "name": "The Caerûnian Calendar",
+    "region": "Caerûn",
+    "offset": {
+      "year": 2593,
+      "month": 0,
+      "day": 0,
+      "hour": 0,
+      "minute": 0
+    },
+    "year-length": {
+      "day": 365,
+      "hour": 5,
+      "minute": 48
+    },
+    "months": [
+      {
+        "name": "January",
+        "length": 31
+      },
+      {
+        "name": "February",
+        "length": 28
+      },
+      {
+        "name": "March",
+        "length": 31
+      },
+      {
+        "name": "April",
+        "length": 30
+      },
+      {
+        "name": "May",
+        "length": 31
+      },
+      {
+        "name": "June",
+        "length": 30
+      },
+      {
+        "name": "July",
+        "length": 31
+      },
+      {
+        "name": "August",
+        "length": 31
+      },
+      {
+        "name": "September",
+        "length": 30
+      },
+      {
+        "name": "Oktober",
+        "length": 31
+      },
+      {
+        "name": "November",
+        "length": 30
+      },
+      {
+        "name": "Desember",
+        "length": 31
+      },
+      {
+        "name": "Leap Day",
+        "length": 1,
+        "is-leap-days": true,
+        "appears": {
+          "month": "February",
+          "position": 29
+        }
+      }
+    ],
+    "aliases": [
+      "caerûnian",
+      "caerûn"
+    ]
+  }
+]
