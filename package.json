@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-calendar-manager",
+	"name": "obsidian-sample-plugin",
 	"version": "1.0.0",
-	"description": "This is a calendar plugin for Obsidian (https://obsidian.md)",
+	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
@@ -11,7 +11,11 @@
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
+	"dependencies": {
+		"vue": "^3.3.4"
+	},
 	"devDependencies": {
+		"@the_tree/esbuild-plugin-vue3": "^0.3.1",
 		"@types/node": "^16.11.6",
 		"@typescript-eslint/eslint-plugin": "5.29.0",
 		"@typescript-eslint/parser": "5.29.0",

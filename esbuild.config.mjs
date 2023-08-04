@@ -38,7 +38,7 @@ const context = await esbuild.context({
 	sourcemap: prod ? false : "inline",
 	treeShaking: true,
 	outfile: "main.js",
-});
+}).catch(() => process.exit(1));
 
 if (prod) {
 	await context.rebuild();
